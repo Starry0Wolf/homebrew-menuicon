@@ -1,0 +1,3 @@
+#!/bin/bash
+python3 /opt/homebrew/share/menuicon/menuicon.py "$@"
+
