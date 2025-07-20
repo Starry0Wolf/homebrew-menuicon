@@ -21,8 +21,6 @@ Or, clone and run manually:
 
 ```sh
 git clone https://github.com/Starry0Wolf/homebrew-menuicon.git
-```
-```sh
 python3 menuicon.py
 ```
 ### Requirements
