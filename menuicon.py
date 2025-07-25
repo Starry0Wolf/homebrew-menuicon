@@ -1,6 +1,9 @@
 import argparse
 import platform
+import signal
 import sys
+
+import gi
 
 IS_MAC = platform.system() == "Darwin"
 IS_LINUX = platform.system() == "Linux"
@@ -15,10 +18,6 @@ if IS_MAC:
     )
     from PyObjCTools import AppHelper
 elif IS_LINUX:
-    import signal
-
-    import gi
-
     gi.require_version("Gtk", "3.0")
     gi.require_version("AppIndicator3", "0.1")
     from gi.repository import AppIndicator3, Gtk
