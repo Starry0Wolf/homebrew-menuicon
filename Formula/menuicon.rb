@@ -4,14 +4,19 @@ class Menuicon < Formula
   desc "Display reversed strings as individual menu bar icons"
   homepage "https://github.com/Starry0Wolf/menuicon"
   url "https://github.com/Starry0Wolf/menuicon/archive/refs/tags/v1.0.3.tar.gz"
-  sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
+  sha256 "3590bcb90a75c32ba8b10d692d26838caedbc267a57db23931694abc9598c873"
   license "MIT"
 
   depends_on "python@3.11"
 
-  resource "pyobjc" do
-    url "https://files.pythonhosted.org/packages/9f/99/4f18364a0b7c44e1bdb43be395ac3077a4e9aa360b151d012be7391e0e3a/pyobjc-10.2.tar.gz"
-    sha256 "ef71a4cbf4853a4723b9ae61deef8693e7656b64c9f78fe7cb5eab21f77e7d58"
+  resource "pyobjc-core" do
+    url "https://files.pythonhosted.org/packages/34/fc/88fd1eab9b2b1bd2042d745f0aa0e4174218c657315e8b56a6c3c3d8bfc7/pyobjc-core-10.2.tar.gz"
+    sha256 "fb1630389de947fdb21c2dc391d5f8bdff0108db911a4b6c65f8adfd2d7ab79e"
+  end
+
+  resource "pyobjc-framework-Cocoa" do
+    url "https://files.pythonhosted.org/packages/bf/c2/e9e30de8ef96d8c173fcd0a733c2fcd1fe7b0fef50a53627be54d60dbf9b/pyobjc-framework-Cocoa-10.2.tar.gz"
+    sha256 "fe5427b13d6b85bfc9edc8f3f8f79f001456e74e5d37640b9ae5d03d7a682ed0"
   end
 
   def install
@@ -20,7 +25,6 @@ class Menuicon < Formula
   end
 
   test do
-    # Might fail headless, but we can at least check the file exists
     assert_predicate bin/"menuicon", :exist?
   end
 end
