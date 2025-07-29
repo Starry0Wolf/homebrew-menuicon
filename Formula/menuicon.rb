@@ -4,7 +4,7 @@ class Menuicon < Formula
   desc "Display reversed strings as individual menu bar icons"
   homepage "https://github.com/Starry0Wolf/menuicon"
   url   "https://github.com/Starry0Wolf/menuicon/archive/refs/tags/v1.0.10.tar.gz"
-  sha256 "<UPDATE_SHA256_FOR_v1.0.10>"
+  sha256 "da3a58cf82862d0bbd05eac08ab13a73d250834c042f03ea50578a171244d445"
   license "MIT"
   revision 1
 
