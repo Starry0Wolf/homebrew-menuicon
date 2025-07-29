@@ -75,17 +75,14 @@ def main():
     # Build the full string with repetitions and custom start
     parts = [args.text] * args.repeat
     full_text = args.separator.join(parts)
-    reversed_text = (args.begin + full_text)[::-1]
+    reversed_text = args.begin + full_text[::-1]
 
     app = NSApplication.sharedApplication()
     icons = []
     for i, char in enumerate(reversed_text):
-        add_quit = i == 0 or i == len(reversed_text) - 1
+        add_quit = i in {0, 1, len(reversed_text) - 1}
         icons.append(MenuBarIcon(char, add_quit))
 
-    print(
-        "To quit go to the far right letter and left click, a dropdown menu will appear, with one of the options being quit."
-    )
     AppHelper.runEventLoop()
 
 
