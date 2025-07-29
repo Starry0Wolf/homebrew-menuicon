@@ -4,7 +4,7 @@ class Menuicon < Formula
   desc "Display reversed strings as individual menu bar icons"
   homepage "https://github.com/Starry0Wolf/menuicon"
   url   "https://github.com/Starry0Wolf/menuicon/archive/refs/tags/v1.0.9.tar.gz"
-  sha256 "fb10439b4a71005804eb12ce8a3455dab2d134b4bc5d3cca32bbfe6a7565cbe7"
+  sha256 "fb6037f018306cd26776c09eb64c763976573d7c8a7c0235743e5e6637b99a1c"
 
   depends_on "python@3.11"
 
