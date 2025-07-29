@@ -3,8 +3,8 @@ class Menuicon < Formula
 
   desc "Display reversed strings as individual menu bar icons"
   homepage "https://github.com/Starry0Wolf/menuicon"
-  url   "https://github.com/Starry0Wolf/menuicon/archive/refs/tags/v1.1.1.tar.gz"
-  sha256 "da716e4ea213c3bc4f09c25828ecadf48b2852279b2605753dc99d460f630fc9"
+  url   "https://github.com/Starry0Wolf/menuicon/archive/refs/tags/v1.1.2.tar.gz"
+  sha256 "58ee77e4047f3e97018c9bb9170186fa6a02dffd45c0a212b753cf05f5de009f"
   license "MIT"
   revision 1
 
@@ -28,7 +28,7 @@ class Menuicon < Formula
 
       setup(
           name="menuicon",
-          version="1.1.1",
+          version="1.1.2",
           py_modules=["menuicon"],
           entry_points={
               "console_scripts": ["menuicon=menuicon:main"],
