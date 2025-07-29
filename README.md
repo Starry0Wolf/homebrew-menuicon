@@ -17,6 +17,11 @@ brew tap Starry0Wolf/menuicon
 brew install menuicon
 ```
 
+If you don't already have Homebrew installed, you can run:
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
 Or, clone and run manually:
 
 ```sh
