@@ -3,8 +3,10 @@ class Menuicon < Formula
 
   desc "Display reversed strings as individual menu bar icons"
   homepage "https://github.com/Starry0Wolf/menuicon"
-  url   "https://github.com/Starry0Wolf/menuicon/archive/refs/tags/v1.0.9.tar.gz"
-  sha256 "fb6037f018306cd26776c09eb64c763976573d7c8a7c0235743e5e6637b99a1c"
+  url   "https://github.com/Starry0Wolf/menuicon/archive/refs/tags/v1.0.10.tar.gz"
+  sha256 "da3a58cf82862d0bbd05eac08ab13a73d250834c042f03ea50578a171244d445"
+  license "MIT"
+  revision 1
 
   depends_on "python@3.11"
 
@@ -19,6 +21,9 @@ class Menuicon < Formula
     sha256 "87df76b9b73e7ca699a828ff112564b59251bb9bbe72e610e670a4dc9940d038"
   end
 
+  # Patch in a minimal setup.py so pip can install the project
+  patch :DATA
+
   def install
     virtualenv_install_with_resources
   end
@@ -27,3 +32,18 @@ class Menuicon < Formula
     assert_match "Display reversed strings", shell_output("#{bin}/menuicon --help")
   end
 end
+
+__END__
+*** Begin Patch
+*** Add File: setup.py
++from setuptools import setup
++
++setup(
++    name="menuicon",
++    version="1.0.8",
++    py_modules=["menuicon"],
++    entry_points={
++        "console_scripts": ["menuicon=menuicon:main"],
++    },
++)
+*** End Patch
