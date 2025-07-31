@@ -30,7 +30,7 @@ python3 menuicon.py
 ```
 ### Requirements
 
-- macOS
+- macOS (linux support coming soon)
 - Python 3
 - [PyObjC](https://pyobjc.readthedocs.io/en/latest/) (`pip install pyobjc`)
 
