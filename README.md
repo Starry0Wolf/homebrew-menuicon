@@ -1,4 +1,4 @@
-# homebrew-menuicon
+# menuicon
 
 A simple macOS menu bar utility for displaying a custom icon or message in your menu bar.
 
